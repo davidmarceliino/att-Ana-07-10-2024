@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Jersey+10&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0%;
+}
+
+body {
+    background-color: rgba(136, 136, 136, 0.776);
+    font-family: Arial, sans-serif;
+    margin: 0%;
+}
+
+
+* {
+    margin: 0%;
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.728);
+}
+
+body {
+    background-color: rgba(136, 136, 136, 0.776);
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(49, 47, 47);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(230, 11, 11);
+    margin-left: 50px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu {
+    padding: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 1.5rem;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(246, 255, 0);
+    font-size: 25px;
+}
+
+.menu li a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.imgLogo {
+    width: 100px;
+    margin-right: 500px;
+}
+
+
+
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: #fff;
+    display: none;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+}
+
+.menu li ul li {
+    border: 1px solid #c0c0c0;
+    display: block;
+    width: 150px;
+}
+
+.dropMenu {
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+}
+
+.dropMenu a {
+    display: block;
+    color: black;
+}
+
+.drop:hover .dropMenu {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.648);
+    border-radius: 8px;
+}
+
+
+.inicio {
+    max-width: 100%;
+    display: flexbox;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.login{
+    list-style: none;
+    border-radius: 5px;
+    font-style: normal;
+    padding: 2px;
+}
+
+
+
+.footer {
+    background-color: #000;
+    color: #ff0000;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cart-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-title {
+    margin: 20px 0;
+    font-size: 32px;
+    color: rgb(230, 11, 11);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.cart-item img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.total {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.instructions {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.instructions h3 {
+    margin-bottom: 10px;
+    color: rgb(230, 11, 11);
+}
+
+.add-product {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.add-product input,
+.add-product button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h3 {
+    color: #e63946;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: #f1faee;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

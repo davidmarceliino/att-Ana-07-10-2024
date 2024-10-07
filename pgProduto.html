@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pgProduto.css">
+    <title>Página do Produto</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"></div><img class="imgLogo" src="img/logo menu.png" alt="">
+        <div class="menu-btn"></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Produtos</a></li>
+                <li class="drop">
+                    <a href="#">Serviços</a>
+                    <div class="dropMenu">
+                        <a href="#Sobre Nós">Sobre Nós</a>
+                    </div>
+                </li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+            <li class="login"><a href="usuarios - Copia/login.html">Login</a></li>
+            <li class="login"><a href="carinho.html">Carrinho</a></li>
+        </nav>
+    </div><br><br><br><br>
+
+    <div class="container">
+        <div class="image-gallery">
+            <img id="mainImage" class="main-image" src="img/tenis.jfif" alt="Produto Principal">
+            <div class="thumbnails">
+                <div class="thumbnail" onclick="changeImage('img/tenis1.png', this)">
+                    <img src="img/tenis1.png" alt="Miniatura 1">
+                </div>
+                <div class="thumbnail" onclick="changeImage('img/img4.jfif', this)">
+                    <img src="img/img4.jfif" alt="Miniatura 2">
+                </div>
+                <div class="thumbnail" onclick="changeImage('img/jordan.avif', this)">
+                    <img src="img/jordan.avif" alt="Miniatura 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="details">
+            <h1 class="product-title">Tênis Esportivo Exemplo</h1>
+            <div class="price">R$ 199,90</div>
+            <div class="description">
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti itaque nesciunt, minus maxime ipsa sapiente nemo repudiandae error consequatur tempore, odio aliquid iusto suscipit voluptas molestias sequi! Sunt, quaerat corrupti?</p>
+            </div>
+            <div class="buy-section">
+                <input type="number" id="productQuantity" value="1" min="1" />
+                <button onclick="incrementQuantity()">+</button>
+                <button onclick="decrementQuantity()">-</button>
+                <button onclick="addToCart('Tênis Nike', 199.90)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div><br><br><br><br>
+
+    <footer style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
+        <div style="max-width: 1200px; margin: auto;">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div>
+                    <h3 style="color: #e63946;">Sobre Nós</h3>
+                    <p>Informações sobre a empresa e sua missão.</p>
+                </div>
+                <div>
+                    <h3 style="color: #e63946;">Links Rápidos</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Inicio</a></li>
+                        <li><a href="#Produtos" style="color: #f1faee; text-decoration: none;">Produtos</a></li>
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Serviços</a></li>
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Contatos</a></li>
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #e63946;">Contato</h3>
+                    <p>Email: contato@exemplo.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+                </div>
+            </div>
+            <hr style="border: 1px solid #e63946; margin: 20px 0;">
+            <p>&copy; 2024. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="pgProduto.js"></script>
+</body>
+</html>

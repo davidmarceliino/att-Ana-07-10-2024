@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="carinho.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo"></div><img class="imgLogo" src="img/logo menu.png" alt="">
+        <div class="menu-btn"></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#Produtos">Produtos</a></li>
+                <li class="drop">
+                    <a href="#">Serviços</a>
+                    <div class="dropMenu">
+                        <a href="#Produtos">Produtos</a>
+                        <a href="#Sobre Nós">Sobre Nós</a>
+                    </div>
+                </li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+            <li class="login"><a href="usuarios - Copia/login.html">Login</a></li>
+        </nav>
+    </div>
+
+    <h1 class="cart-title">Carrinho de Compras</h1>
+
+    <div class="cart-container" id="cart">
+        <p>Nenhum item no carrinho.</p>
+    </div>
+
+    <div class="total" id="total"></div>
+
+    <div class="instructions">
+        <h3>Instruções de Compra</h3>
+        <p>
+            1. Revise os itens em seu carrinho. <br>
+            2. Clique no botão "Finalizar Compra" para prosseguir para o pagamento. <br>
+            3. Insira suas informações de pagamento e endereço de entrega. <br>
+            4. Confirme o pedido e aguarde a confirmação da compra.
+        </p>
+        <button style="padding: 10px 20px; background-color: rgb(143, 131, 131); color: #fff; border: none; border-radius: 5px; cursor: pointer;">Finalizar Compra</button>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
+        <div style="max-width: 1200px; margin: auto;">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div>
+                    <h3 style="color: #e63946;">Sobre Nós</h3>
+                    <p>Informações sobre a empresa e sua missão.</p>
+                </div>
+                <div>
+                    <h3 style="color: #e63946;">Links Rápidos</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Inicio</a></li>
+                        <li><a href="#Produtos" style="color: #f1faee; text-decoration: none;">Produtos</a></li>
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Serviços</a></li>
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Contatos</a></li>
+                        <li><a href="#" style="color: #f1faee; text-decoration: none;">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #e63946;">Contato</h3>
+                    <p>Email: contato@exemplo.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+                </div>
+            </div>
+            <hr style="border: 1px solid #e63946; margin: 20px 0;">
+            <p>&copy; 2024. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.getElementById('cart');
+            const totalElement = document.getElementById('total');
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Nenhum item no carrinho.</p>';
+                totalElement.innerHTML = '';
+            } else {
+                cartContainer.innerHTML = '';
+                let total = 0;
+
+                cart.forEach(item => {
+                    total += item.price * item.quantity; // Multiplica pela quantidade
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `<img src="img/jordan.avif" alt="${item.name}"><span>${item.name} (x${item.quantity})</span><span>R$: ${(item.price * item.quantity).toFixed(2)}</span>`;
+                    cartContainer.appendChild(cartItem);
+                });
+
+                totalElement.innerHTML = `<strong>Total: R$: ${total.toFixed(2)}</strong>`;
+            }
+        }
+
+        window.onload = displayCart;
+    </script>
+</body>
+
+</html>
